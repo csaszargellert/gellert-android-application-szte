@@ -5,21 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activites.LoginActivity">
+    tools:context=".view.activites.SettingsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_32dp"
             android:letterSpacing="0.1"
-            android:text="@string/login"
+            android:text="@string/settings"
+            android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@android:color/holo_purple"
             android:textSize="@dimen/_32sp"
@@ -28,6 +28,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_32dp"
             android:orientation="vertical">
 
             <EditText
@@ -40,66 +41,86 @@
                 android:drawablePadding="@dimen/_12dp"
                 android:ems="10"
                 android:hint="@string/email_address"
-                android:inputType="textEmailAddress"
                 android:paddingHorizontal="@dimen/_12dp"
                 android:paddingVertical="@dimen/_16dp"
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/darker_gray" />
 
             <EditText
-                android:id="@+id/passwordEditText"
+                android:id="@+id/usernameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_12dp"
                 android:background="@drawable/custom_input_border"
-                android:drawableStart="@drawable/custom_lock"
+                android:drawableStart="@drawable/custom_person"
                 android:drawablePadding="@dimen/_12dp"
                 android:ems="10"
-                android:hint="@string/password"
-                android:inputType="textPassword"
+                android:hint="@string/username"
                 android:paddingHorizontal="@dimen/_12dp"
                 android:paddingVertical="@dimen/_16dp"
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/darker_gray" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_48dp">
 
             <Button
-                android:id="@+id/loginButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_12dp"
-                android:background="@drawable/rounded_corners"
-                android:letterSpacing="0.1"
-                android:text="@string/login"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_14sp" />
-
-            <LinearLayout
+                android:id="@+id/cancelButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right">
+                android:layout_marginEnd="@dimen/_24dp"
+                android:background="@drawable/trans_bg_rounded_corners"
+                android:letterSpacing="0.1"
+                android:text="@string/cancel"
+                android:textAllCaps="true"
+                android:textColor="@android:color/holo_purple"
+                android:textSize="@dimen/_14sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Not have an account?" />
-
-                <Button
-                    android:id="@+id/registerNavigationButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_08dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:padding="0dp"
-                    android:text="@string/register"
-                    android:textColor="@android:color/holo_purple" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners"
+                android:letterSpacing="0.1"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_14sp" />
 
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Got any questions?"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_14sp" />
+
+            <Button
+                android:id="@+id/contactButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_08dp"
+                android:background="@android:color/transparent"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:text="Contact us"
+                android:textColor="@android:color/holo_purple"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"

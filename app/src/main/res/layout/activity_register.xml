@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.LoginFragment">
+    tools:context=".view.activites.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_32dp"
             android:letterSpacing="0.1"
-            android:text="@string/login"
+            android:text="@string/register"
             android:textAllCaps="true"
             android:textColor="@android:color/holo_purple"
             android:textSize="@dimen/_32sp"
@@ -46,6 +47,22 @@
                 android:textColorHint="@android:color/darker_gray" />
 
             <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12dp"
+                android:background="@drawable/custom_input_border"
+                android:drawableStart="@drawable/custom_person"
+                android:drawablePadding="@dimen/_12dp"
+                android:ems="10"
+                android:hint="@string/username"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/_12dp"
+                android:paddingVertical="@dimen/_16dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray" />
+
+            <EditText
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,13 +78,29 @@
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/darker_gray" />
 
+            <EditText
+                android:id="@+id/confirmPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12dp"
+                android:background="@drawable/custom_input_border"
+                android:drawableStart="@drawable/custom_lock"
+                android:drawablePadding="@dimen/_12dp"
+                android:ems="10"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:paddingHorizontal="@dimen/_12dp"
+                android:paddingVertical="@dimen/_16dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray" />
+
             <Button
-                android:id="@+id/loginButton"
+                android:id="@+id/registerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_12dp"
                 android:textColor="@color/white"
-                android:text="@string/login"
+                android:text="@string/register"
                 android:textAllCaps="true"
                 android:textSize="@dimen/_14sp"
                 android:letterSpacing="0.1"
@@ -82,19 +115,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Not have an account?"
+                    android:text="Already have an account?"
                     />
 
                 <Button
-                    android:id="@+id/registerNavigationButton"
+                    android:id="@+id/loginNavigationButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:layout_marginStart="@dimen/_08dp"
                     android:padding="0dp"
-                    android:text="@string/register"
+                    android:text="@string/login"
                     android:textColor="@android:color/holo_purple"
+
                     />
             </LinearLayout>
 
@@ -102,4 +136,36 @@
 
     </LinearLayout>
 
-</LinearLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:elevation="0dp"
+        app:fabCradleMargin="@dimen/_08dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            app:itemIconSize="@dimen/_32dp"
+            app:itemIconTint="@color/bottom_nav_color"
+            app:labelVisibilityMode="unlabeled" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_purple"
+        android:src="@drawable/my_bookings"
+        app:borderWidth="0dp"
+        app:layout_anchor="@+id/bottomAppBar"
+        app:tint="@android:color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
