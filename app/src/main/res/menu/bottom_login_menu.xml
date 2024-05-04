@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/home"
+        android:id="@+id/bottom_menu_home"
+        android:icon="@drawable/home"
+    />
+    <item android:title="@string/book"
+        android:id="@+id/bottom_menu_book"
+        android:icon="@drawable/calendar"
+        />
+    <item
+        android:id="@+id/fab"
+        android:enabled="false"
+        android:title=""
+        />
+    <item android:title="@string/settings"
+        android:id="@+id/bottom_menu_settings"
+        android:icon="@drawable/settings"
+        />
+    <item android:title="@string/logout"
+        android:id="@+id/bottom_menu_logout"
+        android:icon="@drawable/logout"
+        />
+</menu>

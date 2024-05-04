@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NailAppointmentApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.NailAppointmentApp" parent="Base.Theme.NailAppointmentApp" />
+
+    <style name="App.ActiveIndicator.Transparent" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomCalendarTheme">
+        <item name="android:dateTextAppearance">@style/CalenderViewDateCustomText</item>
+        <item name="android:weekDayTextAppearance">@style/CalendarViewWeekCustomText</item>
+    </style>
+    
+    <style name="CalendarViewWeekCustomText">
+        <item name="android:textColor">@android:color/holo_purple</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText">
+        <item name="android:textColor">@drawable/calendar</item>
+    </style>
+
+    <style name="Theme.Custom" parent="@android:style/Theme">
+        <item name="android:calendarViewStyle">@style/Widget.CalendarView.Custom</item>
+    </style>
+
+    <style name="Widget.CalendarView.Custom" parent="android:Widget.CalendarView">
+        <item name="android:weekDayTextAppearance">@style/CalendarViewWeekCustomText</item>
+        <item name="android:dateTextAppearance">@style/CalenderViewDateCustomText</item>
+    </style>
+</resources>
