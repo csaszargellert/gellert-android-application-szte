@@ -1,48 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    tools:context=".view.activites.MyAppointmentsActivity">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dateRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Welcome to my nail appointment application"
-        android:textAlignment="center"
-        android:textSize="@dimen/_48sp"
-        android:textColor="@android:color/holo_purple"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
         />
 
     <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottomAppBar"
         android:layout_gravity="bottom"
-        app:fabCradleMargin="@dimen/_08dp"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp"
         app:elevation="0dp"
-        >
+        app:fabCradleMargin="@dimen/_08dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
-            android:background="@color/light_gray"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:itemIconTint="@color/bottom_nav_color"
-            app:labelVisibilityMode="unlabeled"
+            android:background="@color/light_gray"
             app:itemIconSize="@dimen/_32dp"
-            />
+            app:itemIconTint="@color/bottom_nav_color"
+            app:labelVisibilityMode="unlabeled" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -52,8 +40,8 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/holo_purple"
         android:src="@drawable/my_bookings"
-        app:layout_anchor="@+id/bottomAppBar"
         app:borderWidth="0dp"
-        app:tint="@android:color/white"
-        />
+        app:layout_anchor="@+id/bottomAppBar"
+        app:tint="@android:color/white" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
