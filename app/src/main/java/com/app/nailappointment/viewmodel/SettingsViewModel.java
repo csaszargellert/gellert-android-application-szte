@@ -1,17 +1,13 @@
 package com.app.nailappointment.viewmodel;
 
-import android.app.Application;
-
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
-public class SettingsViewModel extends AndroidViewModel {
+public class SettingsViewModel extends ViewModel {
 
     private final MutableLiveData<Boolean> isEditModeOn;
 
-    public SettingsViewModel(@NonNull Application application) {
-        super(application);
+    public SettingsViewModel() {
         isEditModeOn = new MutableLiveData<>();
         setIsEditModeOn(false);
     }
