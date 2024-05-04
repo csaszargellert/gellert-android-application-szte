@@ -43,9 +43,13 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth)
-    implementation(libs.firebase.database)
     implementation(libs.firebase.firestore)
     implementation("com.firebaseui:firebase-ui-firestore:8.0.2")
     implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.lifecycle.viewmodel.ktx)
+
+    val room_version = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
 }
