@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  WHITE SPACES  -->
+    <dimen name="_96dp">96dp</dimen>
+    <dimen name="_64dp">64dp</dimen>
+    <dimen name="_48dp">48dp</dimen>
+    <dimen name="_32dp">32dp</dimen>
+    <dimen name="_24dp">24dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+    <dimen name="_08dp">8dp</dimen>
+    <!--  TEXT  -->
+    <dimen name="_64sp">64sp</dimen>
+    <dimen name="_48sp">48sp</dimen>
+    <dimen name="_32sp">32sp</dimen>
+    <dimen name="_24sp">24sp</dimen>
+    <dimen name="_20sp">20sp</dimen>
+    <dimen name="_16sp">16sp</dimen>
+    <dimen name="_14sp">14sp</dimen>
+    <dimen name="_12sp">12sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>

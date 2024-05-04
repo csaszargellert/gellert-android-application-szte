@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "197800405215",
+    "project_id": "nail-appointment-application",
+    "storage_bucket": "nail-appointment-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197800405215:android:a163d8b2abdf4354a8a16a",
+        "android_client_info": {
+          "package_name": "com.app.nailappointment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa0Lbe4-Uc6nNJwf3In3O1oyOQRzmQyPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
