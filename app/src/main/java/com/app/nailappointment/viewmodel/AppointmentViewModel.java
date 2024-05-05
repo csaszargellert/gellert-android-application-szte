@@ -7,7 +7,7 @@
 //import androidx.lifecycle.MutableLiveData;
 //
 //import com.app.nailappointment.db.DateEntity;
-//import com.app.nailappointment.repository.AppointmentRepository;
+//import com.app.nailappointment.firebase.repository.AppointmentRepository;
 //import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 //
 //import java.util.List;
