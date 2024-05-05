@@ -11,19 +11,14 @@ import com.app.nailappointment.firebase.viewmodel.FirebaseAuthenticationViewmode
 import com.app.nailappointment.firebase.viewmodel.FirebaseUserViewmodel;
 import com.app.nailappointment.room.viewmodel.UserRoomViewModel;
 import com.app.nailappointment.utils.CustomError;
-import com.app.nailappointment.utils.Styler;
+import com.app.nailappointment.utils.NavBarActivities;
+import com.app.nailappointment.utils.NavigationHelper;
+import com.app.nailappointment.utils.StylerHelper;
 import com.app.nailappointment.utils.Validator;
 import com.app.nailappointment.utils.model.User;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.app.nailappointment.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -57,12 +52,15 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.loginButton);
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
+
+        NavigationHelper navHelper = new NavigationHelper(this, firebaseAuthViewmodel, NavBarActivities.LOGIN);
+        navHelper.setupNavigationListener();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Styler.underlineButton(registerNavigationButton);
+        StylerHelper.underlineButton(registerNavigationButton);
         registerNavigationButton.setOnClickListener(this::onNavigateToRegister);
         loginButton.setOnClickListener(this::onLogin);
     }

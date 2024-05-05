@@ -6,7 +6,7 @@
         android:icon="@drawable/home"
         />
     <item android:title="@string/book"
-        android:id="@+id/bottom_menu_book"
+        android:id="@+id/bottom_menu_date"
         android:icon="@drawable/calendar"
         />
     <item android:title="@string/login"

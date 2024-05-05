@@ -17,6 +17,8 @@ import com.app.nailappointment.firebase.viewmodel.FirebaseAuthenticationViewmode
 import com.app.nailappointment.firebase.viewmodel.FirebaseUserViewmodel;
 import com.app.nailappointment.room.viewmodel.UserRoomViewModel;
 import com.app.nailappointment.utils.CustomError;
+import com.app.nailappointment.utils.NavBarActivities;
+import com.app.nailappointment.utils.NavigationHelper;
 import com.app.nailappointment.utils.Validator;
 import com.app.nailappointment.utils.model.User;
 import com.app.nailappointment.utils.viewmodel.SettingsViewModel;
@@ -63,6 +65,9 @@ public class SettingsActivity extends AppCompatActivity {
         usernameEditText = findViewById(R.id.usernameEditText);
         cancelButton = findViewById(R.id.cancelButton);
         contactButton = findViewById(R.id.contactButton);
+
+        NavigationHelper navHelper = new NavigationHelper(this, firebaseAuthViewModel, NavBarActivities.SETTINGS);
+        navHelper.setupNavigationListener();
     }
 
     @Override
