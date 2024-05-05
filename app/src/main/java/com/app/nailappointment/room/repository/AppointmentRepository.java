@@ -9,6 +9,7 @@ import com.app.nailappointment.room.dao.AppointmentDao;
 import com.app.nailappointment.room.database.AppointmentDatabase;
 import com.app.nailappointment.utils.model.Appointment;
 
+import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -44,8 +45,12 @@ public class AppointmentRepository {
         });
     }
 
-    public LiveData<Appointment> getAppointments(String userId) {
-        return appointmentDao.getAll(userId);
+    public LiveData<List<Appointment>> getAppointmentsByUserId(String userId) {
+        return appointmentDao.getAllByUserId(userId);
+    }
+
+    public LiveData<List<Appointment>> getAllAppointments(int year, int month, int day) {
+        return appointmentDao.getAllByDate(year, month, day);
     }
 }
 

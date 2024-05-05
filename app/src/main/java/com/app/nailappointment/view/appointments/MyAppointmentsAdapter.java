@@ -12,7 +12,7 @@
 //import com.app.nailappointment.R;
 //import com.app.nailappointment.db.DateEntity;
 //import com.app.nailappointment.utils.DateTimeHelper;
-//import com.app.nailappointment.viewmodel.AppointmentViewModel;
+//import com.app.nailappointment.utils.viewmodel.AppointmentViewModel;
 //import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 //import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 //

@@ -13,8 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.app.nailappointment.R;
-import com.app.nailappointment.db.DateEntity;
-import com.app.nailappointment.db.Timeslot;
 
 import java.util.List;
 

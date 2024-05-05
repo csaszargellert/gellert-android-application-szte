@@ -9,6 +9,8 @@ import androidx.lifecycle.LiveData;
 import com.app.nailappointment.room.repository.AppointmentRepository;
 import com.app.nailappointment.utils.model.Appointment;
 
+import java.util.List;
+
 public class AppointmentViewModel extends AndroidViewModel {
 
     private AppointmentRepository appointmentRepository;
@@ -26,7 +28,14 @@ public class AppointmentViewModel extends AndroidViewModel {
         appointmentRepository.deleteAppointment(appointment);
     }
 
-    public LiveData<Appointment> getUserAppointments(String userId) {
-        return appointmentRepository.getAppointments(userId);
+    public LiveData<List<Appointment>> getUserAppointments(String userId) {
+        return appointmentRepository.getAppointmentsByUserId(userId);
+    }
+
+    public LiveData<List<Appointment>> getAllAppointments(Appointment appointment) {
+        return appointmentRepository.getAllAppointments(appointment.getYear(),
+                appointment.getMonth(),
+                appointment.getDateOfMonth()
+        );
     }
 }

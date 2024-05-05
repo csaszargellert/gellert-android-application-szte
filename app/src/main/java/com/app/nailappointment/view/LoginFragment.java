@@ -23,7 +23,7 @@
 //import com.app.nailappointment.utils.CustomError;
 //import com.app.nailappointment.utils.Styler;
 //import com.app.nailappointment.utils.Validator;
-//import com.app.nailappointment.viewmodel.AuthenticationViewModel;
+//import com.app.nailappointment.utils.viewmodel.AuthenticationViewModel;
 //import com.google.firebase.auth.FirebaseAuth;
 //import com.google.firebase.database.FirebaseDatabase;
 //

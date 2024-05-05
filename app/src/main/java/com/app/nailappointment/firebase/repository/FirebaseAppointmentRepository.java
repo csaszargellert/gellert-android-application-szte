@@ -5,7 +5,6 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.app.nailappointment.db.DateEntity;
 import com.app.nailappointment.room.viewmodel.AppointmentViewModel;
 import com.app.nailappointment.utils.CollectionPaths;
 import com.app.nailappointment.utils.model.Appointment;
@@ -19,11 +18,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class FirebaseAppointmentRepository {
 
@@ -98,27 +93,11 @@ public class FirebaseAppointmentRepository {
     }
 
     public void save(Appointment appointment, AppointmentViewModel appointmentViewmodel) {
-
+        DocumentReference newDate = mDates.document();
+        String dateId = newDate.getId();
         appointment.setAppointmentId(dateId);
 
-        appointment.getAppointmentSlots()
-                .stream()
-                .map(timeslot -> {
-                    DocumentReference newDate = mDates.document();
-                    String dateId = newDate.getId();
-                    Map<String, Object> newAppointment = new HashMap<>();
-
-                    newAppointment.put(),
-
-                    return newAppointment;
-                })
-                .forEach(timeslot -> {
-
-                });
-
-
-        newDate
-                .set(appointment)
+        newDate.set(appointment)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {

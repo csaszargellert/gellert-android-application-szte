@@ -23,9 +23,9 @@
 //import com.app.nailappointment.db.Timeslot;
 //import com.app.nailappointment.utils.BundleArguments;
 //import com.app.nailappointment.utils.DateTimeHelper;
-//import com.app.nailappointment.viewmodel.AppointmentViewModel;
-//import com.app.nailappointment.viewmodel.AuthenticationViewModel;
-//import com.app.nailappointment.viewmodel.UserViewModel;
+//import com.app.nailappointment.utils.viewmodel.AppointmentViewModel;
+//import com.app.nailappointment.utils.viewmodel.AuthenticationViewModel;
+//import com.app.nailappointment.utils.viewmodel.UserViewModel;
 //
 //import java.util.ArrayList;
 //import java.util.Arrays;

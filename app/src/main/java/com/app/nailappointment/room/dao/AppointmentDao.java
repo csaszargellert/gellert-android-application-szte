@@ -17,7 +17,7 @@ public interface AppointmentDao {
     LiveData<List<Appointment>> getAllByUserId(String userId);
 
     @Query("SELECT * FROM appointments WHERE year =:year AND month =:month AND dateOfMonth =:dateOfMonth")
-    LiveData<List<Appointment>> getAllByDate(String year, String month, String dateOfMonth);
+    LiveData<List<Appointment>> getAllByDate(int year, int month, int dateOfMonth);
 
     @Delete
     void delete(Appointment appointment);

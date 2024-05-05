@@ -24,9 +24,9 @@
 //import com.app.nailappointment.dto.UserDTO;
 //import com.app.nailappointment.utils.CustomError;
 //import com.app.nailappointment.utils.Validator;
-//import com.app.nailappointment.viewmodel.AuthenticationViewModel;
-//import com.app.nailappointment.viewmodel.SettingsViewModel;
-//import com.app.nailappointment.viewmodel.UserViewModel;
+//import com.app.nailappointment.utils.viewmodel.AuthenticationViewModel;
+//import com.app.nailappointment.utils.viewmodel.SettingsViewModel;
+//import com.app.nailappointment.utils.viewmodel.UserViewModel;
 //
 //public class SettingsFragment extends Fragment {
 //
