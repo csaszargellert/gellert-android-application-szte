@@ -1,16 +1,11 @@
 package com.app.nailappointment.view.activites;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.app.nailappointment.R;
@@ -18,7 +13,7 @@ import com.app.nailappointment.firebase.viewmodel.FirebaseAuthenticationViewmode
 import com.app.nailappointment.firebase.viewmodel.FirebaseUserViewmodel;
 import com.app.nailappointment.room.viewmodel.UserRoomViewModel;
 import com.app.nailappointment.utils.CustomError;
-import com.app.nailappointment.utils.Styler;
+import com.app.nailappointment.utils.StylerHelper;
 import com.app.nailappointment.utils.Validator;
 import com.app.nailappointment.utils.model.User;
 
@@ -65,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Styler.underlineButton(loginNavigationButton);
+        StylerHelper.underlineButton(loginNavigationButton);
         registerButton.setOnClickListener(this::onRegister);
         loginNavigationButton.setOnClickListener(this::onNavigateToLogin);
     }

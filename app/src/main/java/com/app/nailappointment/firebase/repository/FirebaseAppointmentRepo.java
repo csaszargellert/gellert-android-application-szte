@@ -20,11 +20,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
-public class FirebaseAppointmentRepository {
+public class FirebaseAppointmentRepo {
 
     private final CollectionReference mDates;
 
-    public FirebaseAppointmentRepository() {
+    public FirebaseAppointmentRepo() {
         this.mDates = FirebaseFirestore.getInstance()
                 .collection(CollectionPaths.DATES.getName());
     }
