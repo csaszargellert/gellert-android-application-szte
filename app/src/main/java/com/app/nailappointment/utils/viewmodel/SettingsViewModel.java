@@ -1,4 +1,4 @@
-package com.app.nailappointment.viewmodel;
+package com.app.nailappointment.utils.viewmodel;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;

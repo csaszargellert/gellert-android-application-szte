@@ -21,7 +21,7 @@
 //import com.app.nailappointment.utils.CustomError;
 //import com.app.nailappointment.utils.Styler;
 //import com.app.nailappointment.utils.Validator;
-//import com.app.nailappointment.viewmodel.AuthenticationViewModel;
+//import com.app.nailappointment.utils.viewmodel.AuthenticationViewModel;
 //
 //public class RegisterFragment extends Fragment {
 //

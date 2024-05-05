@@ -3,13 +3,7 @@ package com.app.nailappointment.utils.model;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
-
-import com.app.nailappointment.db.Timeslot;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity(tableName = "appointments")
 public class Appointment {
@@ -27,9 +21,14 @@ public class Appointment {
 
     private int dateOfMonth;
 
-    private List<Timeslot> appointmentSlots = new ArrayList<>();
+    private int startHour;
 
-    public Appointment() {}
+    private int endHour;
+
+    private int index;
+
+    public Appointment() {
+    }
 
     public Appointment(int year, int month, int dateOfMonth) {
         this.year = year;
@@ -44,6 +43,30 @@ public class Appointment {
 
     public void setAppointmentId(@NonNull String appointmentId) {
         this.appointmentId = appointmentId;
+    }
+
+    public int getStartHour() {
+        return startHour;
+    }
+
+    public int getEndHour() {
+        return endHour;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setStartHour(int startHour) {
+        this.startHour = startHour;
+    }
+
+    public void setEndHour(int endHour) {
+        this.endHour = endHour;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
     }
 
     public String getUserId() {
@@ -76,58 +99,6 @@ public class Appointment {
 
     public void setDateOfMonth(int dateOfMonth) {
         this.dateOfMonth = dateOfMonth;
-    }
-
-    public List<Timeslot> getAppointmentSlots() {
-        return appointmentSlots;
-    }
-
-    public void setAppointmentSlots(List<Timeslot> appointmentSlots) {
-        this.appointmentSlots = appointmentSlots;
-    }
-
-    public void addAppointmentSlot(Timeslot timeslot) {
-        this.appointmentSlots.add(timeslot);
-    }
-
-    public static class Timeslot {
-        private int startHour;
-
-        private int endHour;
-
-        private int index;
-
-        public Timeslot() {}
-
-        public Timeslot(int startHour, int endHour, int index) {
-            this.startHour = startHour;
-            this.endHour = endHour;
-            this.index = index;
-        }
-
-        public int getStartHour() {
-            return startHour;
-        }
-
-        public int getEndHour() {
-            return endHour;
-        }
-
-        public int getIndex() {
-            return index;
-        }
-
-        public void setStartHour(int startHour) {
-            this.startHour = startHour;
-        }
-
-        public void setEndHour(int endHour) {
-            this.endHour = endHour;
-        }
-
-        public void setIndex(int index) {
-            this.index = index;
-        }
     }
 
 }
