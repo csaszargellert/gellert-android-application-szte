@@ -33,7 +33,6 @@ public class FirebaseAuthenticationRepo {
     }
 
     public FirebaseAuthenticationRepo() {
-//        this.application = application;
         this.mAuth = FirebaseAuth.getInstance();
         isUserLoggedInMutableLiveData = new MutableLiveData<>();
         currentUserId = new MutableLiveData<>();

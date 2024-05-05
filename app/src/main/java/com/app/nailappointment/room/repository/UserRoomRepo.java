@@ -15,7 +15,9 @@ public class UserRoomRepo {
 
     private UserDao userDao;
 
-    private Executor executor = Executors.newSingleThreadExecutor();
+    private Executor createExecutor = Executors.newSingleThreadExecutor();
+
+    private Executor updateExecutor = Executors.newSingleThreadExecutor();
 
     public UserRoomRepo(Application application) {
         UserDatabase userDatabase = UserDatabase.getInstance(application);
@@ -23,7 +25,7 @@ public class UserRoomRepo {
     }
 
     public void createUser(User user) {
-        executor.execute(new Runnable() {
+        createExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 userDao.insertUser(user);
@@ -32,7 +34,7 @@ public class UserRoomRepo {
     }
 
     public void updateUser(User user) {
-        executor.execute(new Runnable() {
+        updateExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 userDao.updateUser(user);
