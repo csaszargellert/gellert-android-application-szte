@@ -70,8 +70,8 @@ public class MyAppointmentsActivity extends AppCompatActivity {
                             noAppointmentsTextView.setVisibility(View.VISIBLE);
                         } else {
                             noAppointmentsTextView.setVisibility(View.INVISIBLE);
-                            adapter.setData(appointments);
                         }
+                        adapter.setData(appointments);
                     }
                 });
     }

@@ -32,7 +32,7 @@ public class AppointmentViewModel extends AndroidViewModel {
         return appointmentRepository.getAppointmentsByUserId(userId);
     }
 
-    public LiveData<List<Appointment>> getAllAppointments(Appointment appointment) {
+    public LiveData<List<Appointment>> getAllAppointmentsByDate(Appointment appointment) {
         return appointmentRepository.getAllAppointments(appointment.getYear(),
                 appointment.getMonth(),
                 appointment.getDateOfMonth()

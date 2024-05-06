@@ -5,7 +5,7 @@
     android:id="@+id/timeslot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activites.TimeslotActivity">
+    tools:context=".view.timeslots.TimeslotActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/listViewContainer"
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/currentDate"
@@ -55,8 +55,8 @@
             android:orientation="vertical"
             >
 
-            <ListView
-                android:id="@+id/appointmentsListView"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/appointments"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:choiceMode="multipleChoice"
@@ -67,8 +67,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/listViewContainer"
-            android:layout_marginTop="@dimen/_48dp">
+            android:layout_below="@+id/container"
+            android:layout_marginTop="@dimen/_32dp">
 
             <Button
                 android:id="@+id/goBackButton"
