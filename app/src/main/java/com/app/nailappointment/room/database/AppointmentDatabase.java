@@ -19,9 +19,10 @@ public abstract class AppointmentDatabase extends RoomDatabase {
     public static synchronized  AppointmentDatabase getInstance(Context context) {
         if (mInstance == null) {
             mInstance = Room
-                    .databaseBuilder(context, AppointmentDatabase.class, "appointment_database")
+                    .databaseBuilder(context.getApplicationContext(), AppointmentDatabase.class, "appointment_database")
                     .build();
         }
+
         return mInstance;
     }
 }

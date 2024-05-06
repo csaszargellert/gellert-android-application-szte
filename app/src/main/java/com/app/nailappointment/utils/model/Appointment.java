@@ -10,8 +10,7 @@ public class Appointment {
 
     @NonNull
     @PrimaryKey
-    @ColumnInfo(name = "id")
-    private String appointmentId;
+    private String id;
 
     private String userId;
 
@@ -36,13 +35,24 @@ public class Appointment {
         this.dateOfMonth = dateOfMonth;
     }
 
-    @NonNull
-    public String getAppointmentId() {
-        return appointmentId;
+    public Appointment(@NonNull String id, String userId, int year, int month, int dateOfMonth, int startHour, int endHour, int index) {
+        this.id = id;
+        this.userId = userId;
+        this.year = year;
+        this.month = month;
+        this.dateOfMonth = dateOfMonth;
+        this.startHour = startHour;
+        this.endHour = endHour;
+        this.index = index;
     }
 
-    public void setAppointmentId(@NonNull String appointmentId) {
-        this.appointmentId = appointmentId;
+    @NonNull
+    public String getId() {
+        return id;
+    }
+
+    public void setId(@NonNull String appointmentId) {
+        this.id = appointmentId;
     }
 
     public int getStartHour() {
