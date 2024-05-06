@@ -21,7 +21,7 @@
             android:name=".view.activites.DateActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activites.MyAppointmentsActivity"
+            android:name=".view.appointments.MyAppointmentsActivity"
             android:exported="false" />
         <activity
             android:name=".view.activites.RegisterActivity"

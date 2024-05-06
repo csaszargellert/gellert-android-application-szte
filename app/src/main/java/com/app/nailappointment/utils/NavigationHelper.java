@@ -14,7 +14,7 @@ import com.app.nailappointment.R;
 import com.app.nailappointment.firebase.viewmodel.FirebaseAuthenticationViewmodel;
 import com.app.nailappointment.view.activites.DateActivity;
 import com.app.nailappointment.view.activites.LoginActivity;
-import com.app.nailappointment.view.activites.MyAppointmentsActivity;
+import com.app.nailappointment.view.appointments.MyAppointmentsActivity;
 import com.app.nailappointment.view.activites.SettingsActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -99,6 +99,9 @@ public class NavigationHelper {
                 fireAuthViewmodel.logoutUser();
                 Toast.makeText(mActivity, "You have signed out", Toast.LENGTH_LONG)
                         .show();
+                mActivity.startActivity(
+                        new Intent(mActivity.getApplicationContext(), MainActivity.class)
+                );
                 return true;
             }
 

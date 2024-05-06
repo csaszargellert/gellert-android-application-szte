@@ -76,7 +76,7 @@ public class FirebaseAppointmentRepo {
     }
 
     public void findByIdAndDelete(Appointment appointment, AppointmentViewModel appointmentViewmodel) {
-        mDates.document(appointment.getAppointmentId())
+        mDates.document(appointment.getId())
                 .delete()
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -95,7 +95,7 @@ public class FirebaseAppointmentRepo {
     public void save(Appointment appointment, AppointmentViewModel appointmentViewmodel) {
         DocumentReference newDate = mDates.document();
         String dateId = newDate.getId();
-        appointment.setAppointmentId(dateId);
+        appointment.setId(dateId);
 
         newDate.set(appointment)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {

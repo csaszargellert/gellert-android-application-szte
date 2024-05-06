@@ -16,7 +16,11 @@ public class DateTimeHelper {
         return dateFormatter.format(calendar.getTime());
     }
 
-    public static String formatTime(int hour) {
+    public static String formatTime(int startHour, int endHour) {
+       return formatHour(startHour) + " - " + formatHour(endHour);
+    }
+
+    private static String formatHour(int hour) {
         LocalTime hourTime = LocalTime.of(hour, 0);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
         return hourTime.format(formatter);
