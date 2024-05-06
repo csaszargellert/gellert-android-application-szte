@@ -15,22 +15,22 @@
         android:theme="@style/Theme.NailAppointmentApp"
         tools:targetApi="31">
         <activity
-            android:name=".view.activites.TimeslotActivity"
+            android:name=".view.timeslots.TimeslotActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activites.DateActivity"
+            android:name=".view.DateActivity"
             android:exported="false" />
         <activity
             android:name=".view.appointments.MyAppointmentsActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activites.RegisterActivity"
+            android:name=".view.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activites.SettingsActivity"
+            android:name=".view.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activites.LoginActivity"
+            android:name=".view.LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login" />
         <activity

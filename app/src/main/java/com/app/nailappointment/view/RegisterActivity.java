@@ -1,4 +1,4 @@
-package com.app.nailappointment.view.activites;
+package com.app.nailappointment.view;
 
 import android.content.Intent;
 import android.os.Bundle;

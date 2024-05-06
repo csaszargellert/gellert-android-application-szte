@@ -12,10 +12,10 @@ import androidx.lifecycle.Observer;
 import com.app.nailappointment.MainActivity;
 import com.app.nailappointment.R;
 import com.app.nailappointment.firebase.viewmodel.FirebaseAuthenticationViewmodel;
-import com.app.nailappointment.view.activites.DateActivity;
-import com.app.nailappointment.view.activites.LoginActivity;
+import com.app.nailappointment.view.DateActivity;
+import com.app.nailappointment.view.LoginActivity;
 import com.app.nailappointment.view.appointments.MyAppointmentsActivity;
-import com.app.nailappointment.view.activites.SettingsActivity;
+import com.app.nailappointment.view.SettingsActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
