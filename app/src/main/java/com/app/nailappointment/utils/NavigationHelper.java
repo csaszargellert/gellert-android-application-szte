@@ -23,13 +23,11 @@ public class NavigationHelper {
 
     private FloatingActionButton fab;
 
-    private Activity mActivity;
+    private final Activity mActivity;
 
-    private FirebaseAuthenticationViewmodel fireAuthViewmodel;
+    private final FirebaseAuthenticationViewmodel fireAuthViewmodel;
 
-    private NavBarActivities navBarActivity;
-
-    private BottomNavigationView bottomNavigationView;
+    private final NavBarActivities navBarActivity;
 
 
     public NavigationHelper(Activity _activity, FirebaseAuthenticationViewmodel fireAuthViewmodel, NavBarActivities navBarActivity) {
@@ -40,7 +38,7 @@ public class NavigationHelper {
 
     public void setupNavigationListener() {
         fab = mActivity.findViewById(R.id.floatingActionButton);
-        bottomNavigationView = mActivity.findViewById(R.id.bottomNavigationView);
+        BottomNavigationView bottomNavigationView = mActivity.findViewById(R.id.bottomNavigationView);
 
         bottomNavigationView.setSelectedItemId(navBarActivity.getItemId());
 

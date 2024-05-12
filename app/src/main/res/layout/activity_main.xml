@@ -19,7 +19,7 @@
             android:id="@+id/welcomeTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome"
+            android:text="@string/welcome"
             android:textStyle="bold"
             android:letterSpacing="0.05"
             android:textAllCaps="true"
@@ -42,7 +42,7 @@
             android:id="@+id/bounceButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bounce" />
+            android:text="@string/bounce" />
         </LinearLayout>
     </RelativeLayout>
 
@@ -79,5 +79,5 @@
         app:layout_anchor="@+id/bottomAppBar"
         app:borderWidth="0dp"
         app:tint="@android:color/white"
-        />
+        android:contentDescription="@string/my_appointments" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

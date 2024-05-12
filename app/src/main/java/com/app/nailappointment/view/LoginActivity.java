@@ -2,13 +2,11 @@ package com.app.nailappointment.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.app.nailappointment.MainActivity;
 import com.app.nailappointment.R;
 import com.app.nailappointment.firebase.viewmodel.FirebaseAuthenticationViewmodel;
 import com.app.nailappointment.firebase.viewmodel.FirebaseUserViewmodel;

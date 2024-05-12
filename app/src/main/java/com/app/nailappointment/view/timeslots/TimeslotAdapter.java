@@ -1,26 +1,18 @@
 package com.app.nailappointment.view.timeslots;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.nailappointment.R;
-import com.app.nailappointment.firebase.viewmodel.FirebaseAppointmentViewmodel;
-import com.app.nailappointment.room.viewmodel.AppointmentViewModel;
 import com.app.nailappointment.utils.model.Appointment;
-import com.app.nailappointment.view.appointments.MyAppointmentsAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TimeslotAdapter extends RecyclerView.Adapter<TimeslotAdapter.ViewHolder> {
