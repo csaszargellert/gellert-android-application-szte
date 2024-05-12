@@ -29,19 +29,21 @@ public class NavigationHelper {
 
     private NavBarActivities navBarActivity;
 
-    private String currentActivityName;
+    private BottomNavigationView bottomNavigationView;
+
 
     public NavigationHelper(Activity _activity, FirebaseAuthenticationViewmodel fireAuthViewmodel, NavBarActivities navBarActivity) {
         this.mActivity = _activity;
         this.fireAuthViewmodel = fireAuthViewmodel;
         this.navBarActivity = navBarActivity;
-        this.currentActivityName = mActivity.getLocalClassName();
     }
 
     public void setupNavigationListener() {
         fab = mActivity.findViewById(R.id.floatingActionButton);
-        BottomNavigationView bottomNavigationView = mActivity.findViewById(R.id.bottomNavigationView);
+        bottomNavigationView = mActivity.findViewById(R.id.bottomNavigationView);
+
         bottomNavigationView.setSelectedItemId(navBarActivity.getItemId());
+
         bottomNavigationSetup(bottomNavigationView);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -100,7 +102,7 @@ public class NavigationHelper {
                 Toast.makeText(mActivity, "You have signed out", Toast.LENGTH_LONG)
                         .show();
                 mActivity.startActivity(
-                        new Intent(mActivity.getApplicationContext(), MainActivity.class)
+                        new Intent(mActivity.getApplicationContext(), LoginActivity.class)
                 );
                 return true;
             }
@@ -132,6 +134,7 @@ public class NavigationHelper {
                 } else {
                     bottomNavigation.inflateMenu(R.menu.bottom_logout_menu);
                     fab.setVisibility(View.INVISIBLE);
+
                 }
             }
         });
