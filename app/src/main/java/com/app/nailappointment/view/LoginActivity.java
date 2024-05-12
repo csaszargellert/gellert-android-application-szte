@@ -2,6 +2,7 @@ package com.app.nailappointment.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -94,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
         User user = new User(null, email, password);
 
         firebaseAuthViewmodel.loginUser(user, firebaseUserViewmodel, userRoomViewModel);
-        startActivity(new Intent(this, MainActivity.class));
+
         Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT)
                 .show();
     }

@@ -2,6 +2,8 @@ package com.app.nailappointment.view.appointments;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -57,6 +59,10 @@ public class MyAppointmentsActivity extends AppCompatActivity {
         appointmentRecyclerView.setLayoutManager(layoutManager);
 
         MyAppointmentsAdapter adapter = new MyAppointmentsAdapter(firebaseAppointmentViewmodel, appointmentViewmodel);
+
+        LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(this, R.anim.layout_fall_down_animation);
+        appointmentRecyclerView.setLayoutAnimation(animation);
+
         appointmentRecyclerView.setAdapter(adapter);
 
         String userId = firebaseAuthViewmodel.getUserId().getValue();

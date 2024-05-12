@@ -29,6 +29,8 @@ public class TimeslotAdapter extends RecyclerView.Adapter<TimeslotAdapter.ViewHo
 
     private Appointment appointment;
 
+    private int position;
+
     public TimeslotAdapter(List<Timeslot> timeslots, Appointment appointment) {
         this.appointment = appointment;
         this.timeslots = timeslots;
@@ -36,6 +38,7 @@ public class TimeslotAdapter extends RecyclerView.Adapter<TimeslotAdapter.ViewHo
 
     public void setTimeslots(List<Timeslot> listOfTimeslots) {
         this.timeslots = listOfTimeslots;
+        this.position = -1;
         notifyDataSetChanged();
     }
 
@@ -50,15 +53,18 @@ public class TimeslotAdapter extends RecyclerView.Adapter<TimeslotAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Timeslot currentTimeslot = timeslots.get(position);
+    public void onBindViewHolder(@NonNull ViewHolder holder, int selectedPosition) {
+        Timeslot currentTimeslot = timeslots.get(selectedPosition);
 
         holder.timeTextView.setText(currentTimeslot.toString());
+
+        holder.radioButton.setChecked(position == selectedPosition);
+
         holder.radioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    appointment.setIndex(position);
+                    appointment.setIndex(selectedPosition);
                     appointment.setStartHour(currentTimeslot.getStartHour());
                     appointment.setEndHour(currentTimeslot.getEndHour());
                 }
